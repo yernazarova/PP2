@@ -1,7 +1,7 @@
 
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task1", "task1\task1.csproj", "{054BE0F1-DC34-4064-9D1F-AB758B64BACD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task1", "task1\task1.csproj", "{B9BBE22F-5C15-40B1-BDF6-703F39881287}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,9 +9,9 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{054BE0F1-DC34-4064-9D1F-AB758B64BACD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{054BE0F1-DC34-4064-9D1F-AB758B64BACD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{054BE0F1-DC34-4064-9D1F-AB758B64BACD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{054BE0F1-DC34-4064-9D1F-AB758B64BACD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9BBE22F-5C15-40B1-BDF6-703F39881287}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9BBE22F-5C15-40B1-BDF6-703F39881287}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9BBE22F-5C15-40B1-BDF6-703F39881287}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9BBE22F-5C15-40B1-BDF6-703F39881287}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

@@ -1,37 +1,90 @@
 ﻿using System;
 
-public class Program
+namespace Task1
 {
-
-    public static void Main(string[] args)
+    class Program
     {
-        string b;
-        b = Console.ReadLine();
-        int n = int.Parse(b);
 
-        string[] arr = Console.ReadLine().Split();
-
-        int sum = 0;
-        for (int i = 0; i < n; i++)
+        static bool IsPrime(int prime)
+        //создаем булеву функию, которая будет возвращать true или false  
         {
-            int c = int.Parse(arr[i]);
-            int j;
-            for (j = 2; j < c; j++)
-                if ((c % j == 0))
-                {
-                    break;
-                }
+
+            if (prime == 1)//если наше число p будет равным 1, возвращаем false
+                return false;
 
 
-            if (j == c)
+            for (int   n= 2; n < prime; n++)
+            //создаем цикл  для делителя, начинающийся с 2 до нашего числа, потому что условие с единицой уже рассмотрено 
             {
-                Console.Write(c + " ");
+
+                //возвращем false, если наше число при делении на делитель остается без остатка
+                if (prime % n == 0)
+                    return false;
             }
 
-
-            }
-
+            return true;
+            //возвращем true, если все предыдущие условия не выполняются
         }
-       
+        static void Main(string[] args)
+        {
+            //объявляем первую переменную
+            string s;
+
+            //считываем первую строку
+            s = Console.ReadLine();
+
+            //переобразовываем данные( массив) с считанной строки в тип данных integer
+            int b = int.Parse(s);
+
+            /*
+              создаем массив, в основе которой лежит считанная строка с консоли, 
+              разделенная на части по признаку(пробел) с помощью команды "Split"
+            */
+            string[] a = Console.ReadLine().Split();
+
+            //создаем массив, который состоит из количества b, которое было считано в начале
+            int[] array = new int[b];
+
+            //создаем цикл, чтобы преобразовать наш предыдущий массив в тип integer
+            for(int    l = 0; l < b; l++)
+            {
+                array[l] = int.Parse(a[l]);
+            }
+
+            //объявляем переменную, которая будет считывать количество prime numbers
+            int cnt = 0;
+
+            /*
+             создаем цикл, в основе которого лежит функция, при выполнении 
+             которой будет увеличиваться переменная cnt           
+             */           
+            for(int l= 0; l < b; l++)
+            {
+                //условие: если заданная функция возвращает true
+                if (IsPrime(array[l]) == true)
+                {
+
+                    //считываем количество prime numbers
+                    cnt++; 
+                }
+            }
+
+            //вывести в кансоль конечное количество prime numbers
+            Console.WriteLine(cnt);
+
+
+             
+            for(int l = 0; l < b; l++)
+            /*создаем цикл, в основе которого лежит функция, при выполнении 
+              которой в кансоль будет выведено число, отвечающее заданным условиям  */
+            {
+                //условие: если заданная функция возвращает true
+                if (IsPrime(array[l]) == true)
+
+                    //вывести prime number
+                    Console.Write(array[l] + " ");
+            }
+        }
 
     }
+}
